@@ -6,14 +6,14 @@
 
 @layer base {
   :root {
-    /* Colores románticos principales */
+    /* Colores románticos principales - Tema Claro */
     --romantic-primary: 351 100% 65%;     /* #ff4d6d - Rosa principal */
     --romantic-light: 351 100% 81%;       /* #ff99ac - Rosa claro */
     --romantic-medium: 351 100% 76%;      /* #ff8097 - Rosa medio */
     --romantic-bg: 351 100% 98%;          /* #fff5f7 - Fondo secciones */
     --romantic-text: 0 0% 27%;            /* #444 - Texto general */
     
-    /* Adaptación de tokens del sistema */
+    /* Adaptación de tokens del sistema - Tema Claro */
     --background: 0 0% 100%;
     --foreground: 0 0% 27%;
     
@@ -45,12 +45,52 @@
     --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
+  }
+
+  .dark {
+    /* Colores románticos principales - Tema Oscuro */
+    --romantic-primary: 351 100% 70%;     /* #ff5577 - Rosa más brillante */
+    --romantic-light: 351 80% 60%;        /* #e6667a - Rosa claro oscuro */
+    --romantic-medium: 351 90% 65%;       /* #ff4466 - Rosa medio oscuro */
+    --romantic-bg: 0 0% 8%;               /* #141414 - Fondo secciones oscuro */
+    --romantic-text: 0 0% 90%;            /* #e6e6e6 - Texto claro */
+    
+    /* Adaptación de tokens del sistema - Tema Oscuro */
+    --background: 0 0% 5%;                /* #0d0d0d - Fondo principal muy oscuro */
+    --foreground: 0 0% 90%;               /* #e6e6e6 - Texto principal claro */
+    
+    --card: 0 0% 8%;                     /* #141414 - Fondo de tarjetas */
+    --card-foreground: 0 0% 90%;
+    
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 90%;
+    
+    --primary: 351 100% 70%;
+    --primary-foreground: 0 0% 10%;
+    
+    --secondary: 0 0% 12%;               /* #1f1f1f - Secundario oscuro */
+    --secondary-foreground: 0 0% 90%;
+    
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    
+    --accent: 351 90% 65%;
+    --accent-foreground: 0 0% 10%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 15%;                  /* #262626 - Bordes oscuros */
+    --input: 0 0% 12%;
+    --ring: 351 100% 70%;
+    
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 0% 90%;
+    --sidebar-primary-foreground: 0 0% 10%;
 
     --sidebar-accent: 240 4.8% 95.9%;
 
@@ -220,4 +260,120 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Nuevas animaciones dinámicas */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 77, 109, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 77, 109, 0.8), 0 0 30px rgba(255, 77, 109, 0.6);
+  }
+}
+
+/* Clases de utilidad para animaciones */
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out both;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-confetti {
+  animation: confetti 1s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
 }

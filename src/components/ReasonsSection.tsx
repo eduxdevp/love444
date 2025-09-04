@@ -1,22 +1,22 @@
 const ReasonsSection = () => {
   const reasons = [
-    "Tu sonrisa ilumina mis días más oscuros",
-    "Eres la persona más inteligente que conozco",
-    "Tu corazón es tan grande como hermoso",
-    "Me haces querer ser una mejor persona cada día",
-    "Tu risa es mi sonido favorito en el mundo",
-    "Eres mi lugar seguro en este mundo loco",
-    "Tu forma de ver la vida me inspira constantemente",
-    "Cada momento contigo se siente como magia",
-    "Tu amor me da fuerzas para enfrentar cualquier cosa",
-    "Simplemente eres perfecta tal como eres"
+    "Por la manera en la que me haces ver la vida.",
+    "Por estar siempre para mí.",
+    "Por creer en mí.",
+    "Por esa sonrisa hermosa que tienes.",
+    "Por la manera y madurez con la que afrontas las cosas.",
+    "Por esos ojitos lindos que tanto me gustan.",
+    "Por tu sentido del humor único y especial.",
+    "Por tu manera de querer y amar.",
+    "Por decidir esperarme a pesar de todo.",
+    "Y obvio, por ser perfecta tal como eres <3."
   ];
 
   return (
     <section className="py-16 bg-romantic-bg">
       <div className="container mx-auto px-4">
         <h2 className="text-5xl font-romantic text-romantic-primary text-center mb-16">
-          💘 10 razones por las que te amo
+          10 razones por las que te amo
         </h2>
         
         <div className="max-w-3xl mx-auto">
