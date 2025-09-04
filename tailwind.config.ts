@@ -61,7 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				romantic: {
+					primary: 'hsl(var(--romantic-primary))',
+					light: 'hsl(var(--romantic-light))',
+					medium: 'hsl(var(--romantic-medium))',
+					bg: 'hsl(var(--romantic-bg))',
+					text: 'hsl(var(--romantic-text))'
 				}
+			},
+			fontFamily: {
+				romantic: ['Great Vibes', 'cursive'],
+				body: ['Poppins', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

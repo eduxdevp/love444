@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import Puzzle from '@/components/Puzzle';
+import Popup from '@/components/Popup';
+import MainPage from '@/components/MainPage';
 
 const Index = () => {
+  const [puzzleSolved, setPuzzleSolved] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [showMainPage, setShowMainPage] = useState(false);
+
+  const handlePuzzleSolved = () => {
+    setPuzzleSolved(true);
+    setShowPopup(true);
+  };
+
+  const handlePopupComplete = () => {
+    setShowPopup(false);
+    setShowMainPage(true);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      {!showMainPage && (
+        <Puzzle onSolved={handlePuzzleSolved} />
+      )}
+      
+      <Popup 
+        isVisible={showPopup} 
+        onComplete={handlePopupComplete} 
+      />
+      
+      {showMainPage && <MainPage />}
     </div>
   );
 };
