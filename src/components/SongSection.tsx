@@ -15,14 +15,6 @@ const SongSection = () => {
     {
       title: "A Thousand Years - Christina Perri",
       videoId: "rtOvBOTyX00"
-    },
-    {
-      title: "Make You Feel My Love - Adele",
-      videoId: "0put0_a--Ng"
-    },
-    {
-      title: "Can't Help Myself - Four Tops",
-      videoId: "T6QKqFPRZSA"
     }
   ];
 

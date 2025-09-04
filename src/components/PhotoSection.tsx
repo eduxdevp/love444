@@ -34,19 +34,19 @@ const PhotoSection = () => {
               key={index}
               className={`flex flex-col ${
                 photo.imageLeft ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } items-center gap-8 lg:gap-16`}
+              } items-center gap-8 lg:gap-12`}
             >
               {/* Imagen */}
-              <div className="w-full lg:w-2/5">
+              <div className="w-full lg:w-1/3">
                 <img
                   src={photo.image}
                   alt={`Recuerdo ${index + 1}`}
-                  className="photo-card w-full h-80 object-cover"
+                  className="photo-card w-full h-64 object-cover"
                 />
               </div>
               
               {/* Texto */}
-              <div className="w-full lg:w-3/5">
+              <div className="w-full lg:w-2/3">
                 <p className="text-xl text-romantic-text leading-relaxed font-body">
                   {photo.text}
                 </p>

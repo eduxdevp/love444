@@ -63,9 +63,14 @@ const Puzzle = ({ onSolved }: PuzzleProps) => {
         setTimeout(onSolved, 500);
       }
     } else {
-      const errorMessage = questionKey === 'q4' 
-        ? "mi alma loca, la tenei fácil" 
-        : "tai mal";
+      let errorMessage;
+      if (questionKey === 'q4') {
+        errorMessage = "mi alma loca, la tenei fácil";
+      } else if (questionKey === 'q5') {
+        errorMessage = "pon si porfa";
+      } else {
+        errorMessage = "nopi, tai mal";
+      }
       setErrors(prev => ({ ...prev, [questionKey]: errorMessage }));
     }
   };
@@ -172,7 +177,7 @@ const Puzzle = ({ onSolved }: PuzzleProps) => {
             ) : (
               <div className="text-center">
                 <span className="text-4xl">💕</span>
-                <p className="text-white font-medium text-lg">¡Sabía que me amabas!</p>
+                <p className="text-white font-medium text-lg">yo sabía jejej</p>
               </div>
             )}
           </div>
