@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
+import letterTexture from '@/assets/letter-paper-texture.jpg';
 
 const LetterSection = () => {
   const [isLetterOpen, setIsLetterOpen] = useState(false);
