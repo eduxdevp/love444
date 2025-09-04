@@ -51,7 +51,7 @@ Tu persona favorita ❤️`;
         {/* Modal de la carta */}
         {isLetterOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="letter-background rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative animate-in slide-in-from-bottom-4 duration-500 shadow-2xl border border-romantic-light">
+            <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative animate-in slide-in-from-bottom-4 duration-500 shadow-2xl border border-romantic-light">
               {/* Botón cerrar */}
               <button
                 onClick={() => setIsLetterOpen(false)}
